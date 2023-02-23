@@ -1,0 +1,206 @@
+:root {
+  /* primary colors */
+  --clr-primary-violet: hsl(263, 55%, 52%);
+  --clr-primary-grayishblue: hsl(217, 19%, 35%);
+  --clr-primary-blackishblue: hsl(219, 29%, 14%);
+  --clr-primary-white: hsl(0, 0%, 100%);
+
+  /* neutral colors */
+  --clr-neutral-lightgray: hsl(0, 0%, 81%);
+  --clr-neutral-grayishblue: hsl(210, 46%, 95%);
+
+  --ff-base: 'Barlow Semi Condensed', sans-serif;
+
+  --fw-regular: 400;
+  --fw-bold: 500;
+  --fw-extrabold: 600;
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+/* General Styling */
+body {
+  min-height: 100vh;
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  /* color: var(--clr-neutral-lightgray); */
+  background-color: var(--clr-neutral-grayishblue);
+}
+
+/* Utilities */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Testimonial coponent styling */
+.testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-auto-columns: 1fr;
+  grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five';
+
+  width: min(88%, 70rem);
+  padding-block: 2rem;
+  margin-inline: auto;
+}
+
+.testimonial {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 2.5rem 3.75rem 3rem -3rem var(--clr-neutral-lightgray);
+}
+
+.quote {
+  background-image: url('./images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top right 10%;
+}
+
+.testimonial:nth-child(1) {
+  grid-area: one;
+}
+
+.testimonial:nth-child(2) {
+  grid-area: two;
+}
+
+.testimonial:nth-child(3) {
+  grid-area: three;
+}
+
+.testimonial:nth-child(4) {
+  grid-area: four;
+}
+
+.testimonial:nth-child(5) {
+  grid-area: five;
+}
+
+@media (min-width: 50em) {
+  .testimonial-grid {
+    grid-template-areas:
+      'one one two five'
+      'three four four five';
+
+    gap: 2rem;
+  }
+
+  .quote {
+    background-position: top right 20%;
+  }
+}
+
+/* CHANGE THE BORDER RADIUS COLOR TO HSLA */
+.profile__image {
+  border: 2px solid hsla(0, 0%, 81%, 50%);
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.name {
+  font-size: 0.8rem;
+  line-height: 1.2;
+  font-weight: var(--fw-regular);
+}
+
+.position {
+  font-size: 0.7rem;
+  opacity: 50%;
+}
+
+.testimonial__review {
+  font-size: 1.25rem;
+  line-height: 1.2;
+  margin: 0.8rem 0;
+  font-weight: var(--fw-extrabold);
+}
+
+.testimonial__quote {
+  opacity: 70%;
+}
+
+/* background-color and text color */
+.text-color-light {
+  color: var(--clr-primary-white);
+}
+
+.text-color-dark {
+  color: var(--clr-primary-blackishblue);
+}
+
+.bg-violet {
+  background-color: var(--clr-primary-violet);
+}
+
+.bg-grayishblue {
+  background-color: var(--clr-primary-grayishblue);
+}
+
+.bg-blackishblue {
+  background-color: var(--clr-primary-blackishblue);
+}
+
+.bg-white {
+  background-color: var(--clr-primary-white);
+}
