@@ -136,7 +136,7 @@ body {
   grid-area: five;
 }
 
-@media (min-width: 50em) {
+@media (min-width: 50rem) {
   .testimonial-grid {
     grid-template-areas:
       'one one two five'
